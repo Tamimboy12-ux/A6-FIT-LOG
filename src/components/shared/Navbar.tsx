@@ -1,6 +1,8 @@
 
 "use client";
 
+import { useWorkout } from "@/context/WorkoutContext";
+
 import Link from "next/link";
 import { Dumbbell, Bookmark, ClipboardList } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -19,10 +21,10 @@ const Navbar = () => {
     },
   ];
 
-  // Temporary values.
-  // পরে Context API থেকে dynamic value আসবে।
-  const planCount = 0;
-  const savedCount = 0;
+    const { plan, saved } = useWorkout();
+
+    const planCount = plan.length;
+    const savedCount = saved.length;
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">

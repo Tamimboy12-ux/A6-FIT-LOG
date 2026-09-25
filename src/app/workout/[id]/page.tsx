@@ -1,6 +1,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import WorkoutActions from "@/components/WorkoutActions";
+
 import {
   ArrowLeft,
   Bookmark,
@@ -204,25 +206,10 @@ const WorkoutDetailsPage = async ({
             </div>
 
             {/* ================= ACTIONS ================= */}
-            <div className="mt-9 grid gap-3 sm:grid-cols-2">
-
-              <button
-                type="button"
-                className="btn h-14 rounded-full border-0 bg-[#ccff00] text-sm font-black uppercase text-black hover:bg-[#bff000]"
-              >
-                <Check size={19} />
-                Add to today&apos;s plan
-              </button>
-
-              <button
-                type="button"
-                className="btn h-14 rounded-full border border-white/20 bg-transparent text-sm font-black uppercase text-white hover:border-[#ccff00] hover:bg-[#ccff00] hover:text-black"
-              >
-                <Bookmark size={19} />
-                Save for later
-              </button>
-
+            <div className="mt-9">
+              <WorkoutActions workout={workout} />
             </div>
+            
           </div>
         </div>
       </section>
