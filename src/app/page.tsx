@@ -1,10 +1,16 @@
+import Hero from "@/components/Hero";
+import WorkoutGrid from "@/components/WorkoutGrid";
+import { getWorkouts } from "@/lib/api";
 
+const HomePage = async () => {
+  const workouts = await getWorkouts();
 
-export default function Home() {
   return (
-    
-    <div>
-      Home Page
-    </div>
+    <main>
+      
+      <WorkoutGrid workouts={workouts} />
+    </main>
   );
-}
+};
+
+export default HomePage;
