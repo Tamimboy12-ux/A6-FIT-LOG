@@ -7,7 +7,7 @@ const HomePage = async () => {
 
   return (
     <main>
-      
+      <Hero />
       <WorkoutGrid workouts={workouts} />
     </main>
   );
