@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownRight } from "lucide-react";
+import BannerImg from "@/assets/banner.png"
 
 const Hero = () => {
   return (
@@ -38,12 +39,11 @@ const Hero = () => {
         {/* Image */}
         <div className="relative h-[400px] overflow-hidden rounded-3xl border border-white/10 sm:h-[500px]">
           <Image
-            src="https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666664.jpg?w=740"
+            src={BannerImg}
             alt="FitLog workout"
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 50vw"
+            width={400}
+            height={300}
+            className="mx-auto mt-5"
           />
 
           <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-transparent to-transparent" />
