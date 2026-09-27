@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import { Workout } from "@/types/workout";
 import { useWorkout } from "@/context/WorkoutContext";
+import { toast } from "react-toastify";
 
 interface WorkoutActionsProps {
   workout: Workout;
@@ -33,11 +34,9 @@ const WorkoutActions = ({
     const added = addToPlan(workout);
 
     if (added) {
-      showMessage("Added to today's plan");
+      toast.success(`${workout.name} Added to today's plan`);
     } else {
-      showMessage(
-        "Workout already added or plan is full",
-      );
+      toast.error(`${workout.name} Workout already added or plan is full`);
     }
   };
 
@@ -45,9 +44,9 @@ const WorkoutActions = ({
     const saved = saveWorkout(workout);
 
     if (saved) {
-      showMessage("Workout saved for later");
+      toast.success(`${workout.name} Workout saved for later`);
     } else {
-      showMessage("Workout is already saved");
+      toast.error(`${workout.name} Workout is already saved`);
     }
   };
 
