@@ -54,7 +54,6 @@ const WorkoutActions = ({
     <>
       <div className="grid gap-3 sm:grid-cols-2">
 
-        {/* Add To Plan */}
         <button
           type="button"
           onClick={handleAddToPlan}
@@ -65,7 +64,6 @@ const WorkoutActions = ({
           Add to today&apos;s plan
         </button>
 
-        {/* Save */}
         <button
           type="button"
           onClick={handleSave}
@@ -77,7 +75,6 @@ const WorkoutActions = ({
         </button>
       </div>
 
-      {/* Simple Toast */}
       {message && (
         <div className="toast toast-end toast-bottom z-50">
           <div className="alert border border-[#ccff00] bg-[#171717] text-white shadow-xl">

@@ -44,7 +44,6 @@ const PlanCard = ({ workout, type }: PlanCardProps) => {
     <>
       <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#171717] transition duration-300 hover:-translate-y-1 hover:border-white/20">
         <div className="grid md:grid-cols-[220px_1fr]">
-          {/* Image */}
           <div className="relative h-56 md:h-full">
             <Image
               src={workout.image}
@@ -57,7 +56,6 @@ const PlanCard = ({ workout, type }: PlanCardProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
 
-          {/* Content */}
           <div className="flex flex-col justify-between p-5 sm:p-6">
             <div>
               <div className="mb-3 flex flex-wrap gap-2">
@@ -79,7 +77,6 @@ const PlanCard = ({ workout, type }: PlanCardProps) => {
                 {workout.equipment}
               </p>
 
-              {/* Stats */}
               <div className="mt-5 flex flex-wrap gap-4 text-sm text-white/70">
                 <span className="flex items-center gap-2">
                   <Clock3 size={17} />
@@ -97,7 +94,6 @@ const PlanCard = ({ workout, type }: PlanCardProps) => {
               </div>
             </div>
 
-            {/* Actions */}
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <Link
                 href={`/workout/${workout.id}`}
@@ -130,7 +126,6 @@ const PlanCard = ({ workout, type }: PlanCardProps) => {
         </div>
       </div>
 
-      {/* Toast */}
       {message && (
         <div className="toast toast-end toast-bottom z-50">
           <div className="alert border border-[#ccff00] bg-[#171717] text-white shadow-xl">

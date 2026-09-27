@@ -8,7 +8,6 @@ const Hero = () => {
     <section className="border-b border-white/10 bg-[#101010]">
       <div className="mx-auto grid min-h-[650px] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8">
 
-        {/* Content */}
         <div>
           <p className="mb-5 text-sm font-black tracking-[0.3em] text-[#ccff00]">
             WORKOUT LIBRARY
@@ -36,7 +35,6 @@ const Hero = () => {
           </Link>
         </div>
 
-        {/* Image */}
         <div className="relative h-[400px] overflow-hidden rounded-3xl border border-white/10 sm:h-[500px]">
           <Image
             src={BannerImg}

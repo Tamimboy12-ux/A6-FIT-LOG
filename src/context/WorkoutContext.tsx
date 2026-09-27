@@ -37,17 +37,12 @@ export const WorkoutProvider = ({
   const [plan, setPlan] = useState<Workout[]>([]);
   const [saved, setSaved] = useState<Workout[]>([]);
 
-  // =========================
-  // ADD TO TODAY'S PLAN
-  // =========================
 
   const addToPlan = (workout: Workout) => {
-    // Maximum 5 workouts
     if (plan.length >= 5) {
       return false;
     }
 
-    // Prevent duplicate
     const alreadyExists = plan.some(
       (item) => item.id === workout.id,
     );
@@ -64,9 +59,6 @@ export const WorkoutProvider = ({
     return true;
   };
 
-  // =========================
-  // REMOVE FROM PLAN
-  // =========================
 
   const removeFromPlan = (id: number) => {
     setPlan((previous) =>
@@ -74,9 +66,6 @@ export const WorkoutProvider = ({
     );
   };
 
-  // =========================
-  // SAVE WORKOUT
-  // =========================
 
   const saveWorkout = (workout: Workout) => {
     const alreadySaved = saved.some(
@@ -95,19 +84,12 @@ export const WorkoutProvider = ({
     return true;
   };
 
-  // =========================
-  // REMOVE SAVED
-  // =========================
 
   const removeSaved = (id: number) => {
     setSaved((previous) =>
       previous.filter((item) => item.id !== id),
     );
   };
-
-  // =========================
-  // MARK AS DONE
-  // =========================
 
   const markAsDone = (id: number) => {
     setPlan((previous) =>
@@ -132,9 +114,6 @@ export const WorkoutProvider = ({
   );
 };
 
-// =========================
-// CUSTOM HOOK
-// =========================
 
 export const useWorkout = () => {
   const context = useContext(WorkoutContext);

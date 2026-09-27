@@ -12,7 +12,6 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
     <Link href={`/workout/${workout.id}`} className="group">
       <article className="overflow-hidden rounded-2xl border border-white/10 bg-[#171717] transition duration-300 hover:-translate-y-1 hover:border-[#ccff00]/50">
 
-        {/* Image */}
         <div className="relative h-56 overflow-hidden">
           <Image
             src={workout.image}
@@ -24,7 +23,6 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
 
-          {/* Categories */}
           <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
             {workout.muscleGroups.map((group) => (
               <span
@@ -37,7 +35,6 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-5">
           <h2 className="text-xl font-black uppercase text-white">
             {workout.name}
@@ -47,7 +44,6 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
             {workout.equipment}
           </p>
 
-          {/* Stats */}
           <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-4 text-sm text-gray-400">
 
             <span className="flex items-center gap-1.5">

@@ -46,7 +46,6 @@ const WorkoutGrid = ({ workouts }: WorkoutGridProps) => {
       className="scroll-mt-24 px-4 py-16 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Header */}
         <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-[0.25em] text-[#ccff00]">
@@ -62,7 +61,6 @@ const WorkoutGrid = ({ workouts }: WorkoutGridProps) => {
             </p>
           </div>
 
-          {/* Sort */}
           <div className="relative w-full md:w-56">
             <label
               htmlFor="sort-workouts"
@@ -101,7 +99,6 @@ const WorkoutGrid = ({ workouts }: WorkoutGridProps) => {
           </div>
         </div>
 
-        {/* Workout Grid */}
         {sortedWorkouts.length > 0 ? (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {sortedWorkouts.map((workout) => (

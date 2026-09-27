@@ -6,12 +6,10 @@ const NotFound = () => {
   return (
     <main className="flex min-h-[calc(100vh-80px)] items-center justify-center bg-[#101010] px-4 py-16 text-white">
       <div className="w-full max-w-2xl text-center">
-        {/* Icon */}
         <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-[#ccff00] text-black shadow-[0_0_60px_rgba(204,255,0,0.12)]">
           <Dumbbell size={36} />
         </div>
 
-        {/* 404 */}
         <p className="text-8xl font-black tracking-tighter text-[#ccff00] sm:text-9xl">
           404
         </p>
@@ -29,7 +27,6 @@ const NotFound = () => {
           the library and find your next lift.
         </p>
 
-        {/* Button */}
         <Link
           href="/"
           className="btn mt-8 rounded-full border-0 bg-[#ccff00] px-7 font-black uppercase text-black hover:bg-[#bff000]"

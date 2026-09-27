@@ -30,7 +30,6 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-        {/* Logo */}
         <Link
           href="/"
           className="flex items-center gap-2 transition hover:opacity-80"
@@ -44,7 +43,6 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Navigation */}
         <nav className="hidden items-center gap-2 md:flex">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
@@ -65,9 +63,7 @@ const Navbar = () => {
           })}
         </nav>
 
-        {/* Right Side Badges */}
         <div className="flex items-center gap-2">
-          {/* Plan */}
           <Link
             href="/my-plan"
             className="flex items-center gap-1.5 rounded-full bg-[#ccff00] px-3 py-2 text-xs font-black text-black transition hover:scale-105"
@@ -79,7 +75,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Saved */}
           <Link
             href="/my-plan"
             className="flex items-center gap-1.5 rounded-full border border-[#ccff00] px-3 py-2 text-xs font-black text-[#ccff00] transition hover:bg-[#ccff00] hover:text-black"
@@ -93,7 +88,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div className="border-t border-white/10 md:hidden">
         <nav className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-3">
           {navItems.map((item) => {

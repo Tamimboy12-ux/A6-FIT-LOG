@@ -57,7 +57,6 @@ const WorkoutDetailsPage = async ({
     <main className="min-h-screen bg-[#101010]">
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 
-        {/* Back Button */}
         <Link
           href="/"
           className="mb-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gray-400 transition hover:text-[#ccff00]"
@@ -66,10 +65,8 @@ const WorkoutDetailsPage = async ({
           Back to library
         </Link>
 
-        {/* Main Layout */}
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
 
-          {/* ================= IMAGE ================= */}
           <div className="relative min-h-[450px] overflow-hidden rounded-3xl border border-white/10 bg-[#171717] lg:min-h-[700px]">
             <Image
               src={workout.image}
@@ -93,10 +90,8 @@ const WorkoutDetailsPage = async ({
             </div>
           </div>
 
-          {/* ================= DETAILS ================= */}
           <div className="flex flex-col justify-center">
 
-            {/* Category */}
             <div className="flex flex-wrap gap-2">
               {workout.muscleGroups.map((group) => (
                 <span
@@ -108,17 +103,14 @@ const WorkoutDetailsPage = async ({
               ))}
             </div>
 
-            {/* Title */}
             <h1 className="mt-5 text-4xl font-black uppercase leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
               {workout.name}
             </h1>
 
-            {/* Description */}
             <p className="mt-6 text-base leading-7 text-gray-400">
               {workout.description}
             </p>
 
-            {/* ================= SPECS ================= */}
             <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#171717]">
 
               <div className="border-b border-white/10 px-5 py-4">
@@ -179,7 +171,6 @@ const WorkoutDetailsPage = async ({
               </div>
             </div>
 
-            {/* ================= INSTRUCTIONS ================= */}
             <div className="mt-8">
               <h2 className="text-sm font-black uppercase tracking-[0.2em] text-[#ccff00]">
                 Instructions
@@ -205,7 +196,6 @@ const WorkoutDetailsPage = async ({
               </ol>
             </div>
 
-            {/* ================= ACTIONS ================= */}
             <div className="mt-9">
               <WorkoutActions workout={workout} />
             </div>
@@ -217,7 +207,6 @@ const WorkoutDetailsPage = async ({
   );
 };
 
-/* ================= SPEC ITEM ================= */
 
 interface SpecItemProps {
   label: string;

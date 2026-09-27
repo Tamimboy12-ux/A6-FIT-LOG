@@ -34,7 +34,6 @@ const MyPlanPage = () => {
   return (
     <main className="min-h-screen bg-[#101010] px-4 py-10 text-white sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        {/* Back */}
         <Link
           href="/"
           className="mb-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-white/50 transition hover:text-[#ccff00]"
@@ -43,7 +42,6 @@ const MyPlanPage = () => {
           Back to workouts
         </Link>
 
-        {/* Header */}
         <section className="mb-10">
           <p className="mb-3 text-sm font-black uppercase tracking-[0.25em] text-[#ccff00]">
             YOUR WORKOUTS
@@ -58,7 +56,6 @@ const MyPlanPage = () => {
           </p>
         </section>
 
-        {/* Metrics */}
         <section className="mb-10 grid gap-4 sm:grid-cols-3">
           <div className="rounded-3xl border border-white/10 bg-[#171717] p-6">
             <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#ccff00] text-black">
@@ -100,7 +97,6 @@ const MyPlanPage = () => {
           </div>
         </section>
 
-        {/* Tabs */}
         <div className="mb-8 flex flex-wrap gap-3 border-b border-white/10 pb-4">
           <button
             type="button"
@@ -134,7 +130,6 @@ const MyPlanPage = () => {
           </button>
         </div>
 
-        {/* Workout List */}
         {currentWorkouts.length > 0 ? (
           <section className="space-y-5">
             {currentWorkouts.map((workout) => (
@@ -146,7 +141,6 @@ const MyPlanPage = () => {
             ))}
           </section>
         ) : (
-          /* Empty State */
           <section className="flex min-h-[420px] items-center justify-center rounded-3xl border border-dashed border-white/10 bg-[#141414] px-6 text-center">
             <div className="max-w-md">
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#ccff00]/10 text-[#ccff00]">
